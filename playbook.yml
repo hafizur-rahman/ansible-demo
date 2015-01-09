@@ -1,0 +1,10 @@
+---
+- hosts: all
+  sudo: true
+  tasks:
+    - name: install apache
+      yum: name=httpd state=present
+    - name: install mysql
+      yum: name=mysql-server state=present
+    - name: install php
+      yum: name=php state=present
